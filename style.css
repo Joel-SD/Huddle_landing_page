@@ -62,16 +62,21 @@ section {
 }
 
 .hero-description {
+    max-width: 420px;
     text-align: center;
     margin-top: 2.5rem;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-btn {
     display: inline-block;
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     margin-top: 3rem;
     text-align: center;
     width: 200px;
@@ -79,14 +84,17 @@ section {
     font-weight: 700;
     color: hsl(207, 100%, 98%);
     background-color: hsl(322, 100%, 66%);
-    padding: 10px 30px;
+    padding: 12px 30px;
     border-radius: 20px;
     box-shadow: 0 6px 8px rgba(0, 37, 46, 0.186);
 }
 
 .hero-img-container {
-    width: 100%;
+    width: auto;
+    max-width: 700px;
     margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-img {
@@ -106,7 +114,9 @@ section {
 
 .all-stats {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 6rem;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -121,10 +131,6 @@ section {
 
 .stat-figure {
     width: 100%;
-}
-
-.stat:first-child {
-    margin-bottom: 8rem;
 }
 
 .stat-numbers {
@@ -161,10 +167,6 @@ section:nth-child(3) {
     background-color: #f5faff;
 }
 
-.features-content {
-    max-width: 1200px;
-}
-
 .feature:nth-child(6) {
     padding-top: 1rem;
 }
@@ -189,6 +191,7 @@ section:nth-child(3) {
 }
 
 .feature-description {
+    max-width: 500px;
     margin-top: 1rem;
     font-size: 14px;
     line-height: 20px;
@@ -232,3 +235,268 @@ section:nth-child(3) {
 
 
 /*get started end*/
+
+
+/* footer start*/
+
+.bg-footer {
+    background: no-repeat url("/images/bg-footer-top-mobile.svg");
+    width: 100%;
+    height: 50px;
+}
+
+footer {
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2.5rem;
+    background-color: hsl(192, 100%, 9%);
+}
+
+form {
+    display: inline-block;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.form-title {
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+label {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    margin-bottom: 2.5rem;
+    line-height: 24px;
+}
+
+.add-email {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px 15px 5px;
+    margin-bottom: 1.2rem;
+}
+
+.submit {
+    width: 100%;
+    text-align: right;
+}
+
+.submit-btn {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 14px 40px;
+    border-style: none;
+    color: white;
+    background-color: hsl(322, 100%, 66%);
+}
+
+section:last-of-type {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.footer-img-container {
+    width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-img-container img {
+    filter: invert(100%) sepia(100%) saturate(29%) hue-rotate(215deg) brightness(205%) contrast(100%);
+    width: 100%;
+}
+
+.footer-description {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    list-style: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+.contact-list-item:nth-child(-n+2) {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-list-item:nth-child(2) {
+    margin-bottom: 3rem;
+}
+
+.social-img {
+    width: 24px;
+    margin-right: 1.2rem;
+}
+
+
+/* footer end*/
+
+
+/* media queries 375px*/
+
+@media only screen and (min-width: 375px) {
+    .bg-mobile-bottom-1,
+    .bg-mobile-bottom-2,
+    .bg-mobile-top-1,
+    .bg-mobile-top-2,
+    .bg-footer {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        height: 220px;
+        background-repeat: no-repeat;
+    }
+    .bg-mobile-top-1 {
+        background-image: url("/images/bg-section-top-desktop-1.svg");
+    }
+    .stats-section {
+        margin-bottom: 4rem;
+    }
+    .bg-mobile-bottom-1 {
+        background-image: url("/images/bg-section-bottom-desktop-1.svg");
+    }
+    .bg-mobile-top-2 {
+        background-image: url("/images/bg-section-top-desktop-2.svg");
+    }
+    .bg-mobile-bottom-2 {
+        background-image: url("/images/bg-section-bottom-desktop-2.svg");
+    }
+    .bg-footer {
+        background-image: url("/images/bg-footer-top-desktop.svg");
+    }
+}
+
+
+/* end media queries 375*/
+
+
+/* start media queries 768*/
+
+@media only screen and (min-width: 768px) {
+    .feature {
+        flex-wrap: wrap;
+        flex-flow: row-reverse;
+        justify-content: space-evenly;
+        gap: 4rem;
+    }
+    .feature-figure-container {
+        max-width: 550px;
+    }
+    .feature:nth-child(4) {
+        flex-flow: row;
+    }
+    .all-stats {
+        gap: 16rem;
+    }
+    form {
+        margin: 0px 0px;
+    }
+    #footer {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 6rem;
+        justify-content: space-evenly;
+    }
+    .add-email {
+        width: 250px;
+    }
+    .submit {
+        margin-left: 2rem;
+        display: inline;
+    }
+}
+
+
+/* end media queries 768*/
+
+
+/* start media queries 1024*/
+
+@media only screen and (min-width: 1024px) {
+    header,
+    .hero,
+    .stats-section,
+    .feature,
+    footer {
+        padding: 0px 3rem 0px 3rem;
+    }
+    header {
+        padding-top: 3rem;
+    }
+    footer {
+        padding-bottom: 3rem;
+    }
+    .img-container img {
+        width: 150px;
+    }
+    .try-btn {
+        font-size: 14px;
+    }
+    .hero-title {
+        font-size: 30px;
+    }
+    .hero-btn {
+        width: auto;
+        font-size: 14px;
+    }
+    .stat {
+        transform: scale(1.10, 1.10);
+    }
+    .feature-title {
+        font-size: 26px;
+    }
+    form,
+    .contact {
+        width: 500px;
+    }
+    .hero-img-container {
+        max-width: 1024px;
+    }
+    .all-stats {
+        gap: 24rem;
+    }
+}
+
+
+/* end media queries 1024*/
+
+
+/* active states*/
+
+.try-btn:hover {
+    color: hsl(321, 100%, 78%);
+    transform: scale(106%, 108%);
+    transition: 0.4s;
+}
+
+.hero-btn:hover,
+.submit-btn:hover {
+    background-color: hsl(321, 100%, 70%);
+    transform: scale(106%, 108%);
+    transition: 0.4s;
+}
+
+.social-img:hover {
+    cursor: pointer;
+    transition: 0.1s;
+    filter: invert(9%) sepia(22%) saturate(6795%) hue-rotate(169deg) brightness(98%) contrast(102%);
+}
+
+.add-email:hover {
+    border: 1px solid red;
+    transition: 0.3s;
+}
